@@ -21,5 +21,7 @@ jobs:
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.2.0
       with:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        host: ${{ secrets.SONAR_HOST_URL }}
+        login: ${{ secrets.SONAR_TOKEN }}
+        projectBaseDir: "src/"
+        projectKey: "Microservice_Lab"
